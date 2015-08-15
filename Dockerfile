@@ -2,7 +2,7 @@ FROM ubuntu:14.04
 MAINTAINER Alexander Schenkel <alex@alexi.ch>
 
 VOLUME ["/var/www"]
-
+ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && \
     apt-get install -y software-properties-common && \
     LANG=C.UTF-8 add-apt-repository ppa:ondrej/php5-5.6 && \
